@@ -27,7 +27,7 @@ jobs:
     - name: Deploy Application
       run: |
         aws deploy create-deployment --application-name DeployGHActions \
-          --deployment-group-name Backends \
+          --deployment-group-name ImplementationGHActions \
           --github-location repository=${{ github.repository }},commitId=${{ github.sha }} \
           --region ${{ vars.REGION }} \
           --file-exists-behavior OVERWRITE
